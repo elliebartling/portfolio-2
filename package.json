@@ -8,13 +8,23 @@
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build": "node build.js"
   },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./build --domain emb-portfolio.surge.sh"
+    }
+  },
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
-    "buffer-replace": "^1.0.0",
-    "handlebars": "^4.0.11",
-    "laravel-mix": "^2.1.2",
     "lodash": "^4.17.5",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "browser-sync-webpack-plugin": "^2.0.1",
+    "git-scripts": "^0.2.1",
+    "surge": "^0.20.1",
     "metalsmith": "^2.1.0",
     "metalsmith-assets-improved": "^1.0.0",
     "metalsmith-browser-sync": "^1.1.1",
@@ -28,11 +38,8 @@
     "metalsmith-watch": "^1.0.3",
     "metalsmith-writemetadata": "^0.4.5",
     "nunjucks": "^3.1.2",
-    "vue": "^2.5.16",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
-  },
-  "devDependencies": {
-    "browser-sync-webpack-plugin": "^2.0.1"
+    "laravel-mix": "^2.1.2",
+    "handlebars": "^4.0.11",
+    "buffer-replace": "^1.0.0"
   }
 }
