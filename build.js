@@ -10,11 +10,18 @@ let assets        = require( 'metalsmith-assets-improved' )
 var relative      = require('./lib/relative.js')
 var msIf          = require('metalsmith-if');
 var dataLoader    = require("metalsmith-data-loader")
-
+var inplace       = require('metalsmith-in-place')
+var moremeta      = require('./lib/moremeta')
 
 var shouldWatch = process.env.NODE_ENV == 'production' ? false : true
 console.log('Environment is ' + process.env.NODE_ENV)
 
+var templateConfig = {
+    engine: 'handlebars',
+    directory: 'layouts/',
+    partials: 'layouts/partials/',
+    default: 'page.html'
+  };
 
 metalsmith(__dirname)
   .source('./content')
@@ -27,18 +34,29 @@ metalsmith(__dirname)
     done()
   })
   .use(collections({
+    page: {
+      pattern: '*.md',
+      metadata: {
+        layout: "index.html"
+      }
+    },
     posts: {
-      pattern: 'posts/*.md'
+      pattern: 'posts/*.md',
+      metadata: {
+        layout: "post.html"
+      }
     },
     work: {
-      pattern: 'work/*.md'
+      pattern: 'work/*.md',
+      metadata: {
+        layout: 'work.html',
+      }
     }
   }))
   .use(markdown())
   .use(permalinks())
-  .use(layouts({
-    engine: 'handlebars'
-  }))
+  .use(moremeta())
+  .use(layouts(templateConfig))
   .use(relative({
     searchFor: '../assets',
     replaceWith: '/assets'
@@ -54,9 +72,6 @@ metalsmith(__dirname)
         output: {
           path: 'api/posts.json',
           asObject: true,
-          metadata: {
-            "type": "collection"
-          }
         },
         ignorekeys: ['stats', 'mode', 'next', 'previous']
       },
@@ -81,16 +96,16 @@ metalsmith(__dirname)
     src: 'assets',
     dest: 'assets'
   }))
-  .use(msIf(
-    shouldWatch,
-    watch({
-      paths: {
-        "content/**/*": true,
-        "layouts/**/*": "**/*",
-        "assets/**": true
-      }
-    })
-  ))
+  // .use(msIf(
+  //   shouldWatch,
+  //   watch({
+  //     paths: {
+  //       "content/**/*": true,
+  //       "layouts/**/*": "**/*",
+  //       "assets/**": true
+  //     }
+  //   })
+  // ))
   .build(function(err, files) {
     if (err) { throw err; }
   })
