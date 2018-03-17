@@ -1,29 +1,53 @@
-h4#intro
+#home
+  padding-top: 200px
+
+h4
   font-size: .7rem
   font-weight: 700
   letter-spacing: 1px
   position: relative
   display: flex
   flex-direction: row
-  justify-content: flex-start
+  justify-content: flex-end
   align-items: center
-  margin-top: 7rem
-  color: $red
-  text-transform: uppercase
-  &:before
-    content: ''
-    position: relative
-    width: 100px
-    height: 2px
-    background: $red
-    display: block
-    margin-right: 10px
-    margin-left: -40px
-
-#home h1
-  font-size: 5rem
-  font-weight: 700
-  letter-spacing: -1px
-  margin-top: 1rem
+  margin-top: 4rem
   margin-bottom: 2rem
- 
+  color: $gray-500
+  text-transform: uppercase
+  position: relative
+  text-align: right
+  padding-right: 20px
+  top: 56px
+
+h4 + p
+  font-size: 2rem
+  line-height: 1.25
+  font-weight: 400
+
+h1
+  font-size: 5rem
+  font-weight: 800
+  letter-spacing: -1px
+  margin-bottom: 2rem
+  line-height: 1.1
+  color: #000DFF
+
+p
+  position: relative
+
+p img
+  position: relative
+  width: 110%
+  left: -5%
+  right: -5%
+  margin-top: 1.5rem
+  margin-bottom: 1.5rem
+
+p > img + em
+  color: rgba($gray-900, .5)
+  font-weight: 500
+  position: relative
+  left: 0
+  right: 0
+  display: block
+  text-align: center

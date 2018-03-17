@@ -8,6 +8,13 @@ var metadata      = require('metalsmith-metadata');
 var watch         = require('metalsmith-watch');
 let assets        = require( 'metalsmith-assets-improved' )
 var relative      = require('./lib/relative.js')
+var msIf          = require('metalsmith-if');
+var dataLoader    = require("metalsmith-data-loader")
+
+
+var shouldWatch = process.env.NODE_ENV == 'production' ? false : true
+console.log('Environment is ' + process.env.NODE_ENV)
+
 
 metalsmith(__dirname)
   .source('./content')
@@ -32,10 +39,7 @@ metalsmith(__dirname)
     }
   }))
   .use(markdown())
-  // .use(permalinks())
-  // .use(layouts({
-  //   engine: 'handlebars'
-  // }))
+  .use(permalinks())
   .use(relative({
     searchFor: '../assets',
     replaceWith: '/assets'
@@ -69,17 +73,34 @@ metalsmith(__dirname)
       }
     }
   }))
+  // .use(dataloader({
+  //   dataProperty: 'api',
+  //
+  // }))
+  // .use(layouts({
+  //   engine: 'handlebars'
+  // }))
   .use(assets({
     src: 'assets',
     dest: '../assets'
   }))
-  .use(watch({
-    paths: {
-      "content/**/*": true,
-      "layouts/**/*": "**/*",
-      "assets/**": true
-    }
-  }))
+  .use(msIf(
+    shouldWatch,
+    watch({
+      paths: {
+        "content/**/*": true,
+        "layouts/**/*": "**/*",
+        "assets/**": true
+      }
+    })
+  ))
+  // .use(watch({
+  //   paths: {
+  //     "content/**/*": true,
+  //     "layouts/**/*": "**/*",
+  //     "assets/**": true
+  //   }
+  // }))
   .build(function(err, files) {
     if (err) { throw err; }
   })

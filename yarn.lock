@@ -4511,7 +4511,7 @@ js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@^3.2.7, js-yaml@^3.4.3, js-yaml@^3.8.1:
+js-yaml@*, js-yaml@^3.2.7, js-yaml@^3.4.3, js-yaml@^3.8.1:
   version "3.11.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.11.0.tgz#597c1a8bd57152f26d622ce4117851a51f5ebaef"
   dependencies:
@@ -5089,9 +5089,23 @@ metalsmith-collections@^0.9.0:
     read-metadata "^1.0.0"
     uniq "^1.0.1"
 
+metalsmith-data-loader@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/metalsmith-data-loader/-/metalsmith-data-loader-1.1.2.tgz#5e50794bcd3c47ba613e50cd36c24541cfa92ddf"
+  dependencies:
+    debug "^2.6.8"
+    js-yaml "*"
+    metalsmith-plugin-kit "^1.0.1"
+
 metalsmith-filenames@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/metalsmith-filenames/-/metalsmith-filenames-1.0.0.tgz#df4e69f246b8325bb9189e0273d2ee70899d00de"
+
+metalsmith-if@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/metalsmith-if/-/metalsmith-if-0.1.1.tgz#e6dd9f18ba6562bc2fadfddd1fc38ce5319d3fae"
+  dependencies:
+    debug "^2.2.0"
 
 metalsmith-layouts@^1.4.1:
   version "1.8.1"

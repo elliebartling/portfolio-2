@@ -1,15 +1,16 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
 import find from 'lodash/find'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    posts: [],
-    pages: [],
-    work: []
+    posts: require('../../build/api/posts.json').result,
+    pages: [
+      require('../../build/api/index.json')
+    ],
+    work: require('../../build/api/work.json').result
   },
   getters: {
     pageByTitle: (state) => (title) => {
@@ -25,23 +26,5 @@ const store = new Vuex.Store({
     },
   }
 })
-
-axios.get('/api/index.json')
-  .then((res) => {
-    console.log(res)
-    store.commit('push', { key: 'pages', data: res.data })
-  })
-
-axios.get('/api/posts.json')
-  .then((res) => {
-    console.log(res)
-    store.commit('set', { key: 'posts', data: res.data.result })
-  })
-
-axios.get('/api/work.json')
-  .then((res) => {
-    console.log(res)
-    store.commit('set', { key: 'work', data: res.data.result })
-  })
 
 export { store }
