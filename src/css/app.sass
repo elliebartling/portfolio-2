@@ -4,6 +4,7 @@ $gray-900: #182848
 // background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
 @import "node_modules/bootstrap/scss/bootstrap"
 @import 'pages/home'
+@import 'pages/highlights'
 
 
 main.container
@@ -16,3 +17,13 @@ header
     position: relative
     max-width: 80px
     // left: -40px
+
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .5s
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+  opacity: 0
+
+
+  

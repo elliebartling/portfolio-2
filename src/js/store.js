@@ -8,7 +8,7 @@ const store = new Vuex.Store({
   state: {
     posts: require('../../build/api/posts.json').result,
     pages: [
-      require('../../build/api/index.json')
+      require('../../build/index.json')
     ],
     work: require('../../build/api/work.json').result
   },

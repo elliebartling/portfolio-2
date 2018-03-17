@@ -1,11 +1,11 @@
 <template>
   <div id="highlights" v-bind:class="{ rendered: rendered }">
-    <h4>Recent Projects</h4>
+    <h4>Recent Thoughts</h4>
     <div class="row">
-      <div v-for="w in work" class="work-post">
-        <a :href="w.path">
-          <img :src="w.image" />
-          <h3>{{ w.title }}</h3>
+      <div v-for="post in posts" class="work-post">
+        <a :href="post.path">
+          <img :src="post.image" />
+          <h3>{{ post.title }}</h3>
         </a>
       </div>
     </div>
@@ -19,8 +19,8 @@ export default {
     }
   },
   computed: {
-    work: function() {
-      return this.$store.state.work
+    posts: function() {
+      return this.$store.state.posts
     }
   },
   mounted() {

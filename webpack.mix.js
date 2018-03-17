@@ -13,7 +13,7 @@ let mix = require('laravel-mix');
 
 mix.js('src/js/app.js', 'build')
     .sass('src/css/app.sass', 'build')
-    .copy('src/layouts/index.html', 'build')
+    // .copy('src/layouts/index.html', 'build')
     .setPublicPath('build')
     .browserSync({
       proxy: false,

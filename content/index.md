@@ -1,11 +1,12 @@
 ---
 title: 'Home'
 data: api.json
+layout: index.html 
 ---
 # interaction designer & developer
 
 #### intro
-Hi, I'm Ellen. I make sense out of messes through interactive design.
+Hi, I'm Ellen 👋🏻  I make complicated things more accessible through interactive **design.**
 
 I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs. Currently, I work with an amazing team at an Austin, TX creative agency called Emergent Order that’s dedicated to making awesome things, including apps, websites, digital magazines, identity + branding redesign, and any kind of video production under the sun.
 

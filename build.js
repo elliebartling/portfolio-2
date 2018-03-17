@@ -18,8 +18,8 @@ console.log('Environment is ' + process.env.NODE_ENV)
 
 metalsmith(__dirname)
   .source('./content')
-  .destination('./build/api')
-  .clean(true)
+  .destination('./build')
+  .clean(false)
   .use((files, metalsmith, done) => {
     metalsmith._metadata.collections = null
     metalsmith._metadata.posts = null
@@ -28,18 +28,17 @@ metalsmith(__dirname)
   })
   .use(collections({
     posts: {
-      pattern: 'posts/*.md',
-      sortBy: 'date',
-      reverse: true
+      pattern: 'posts/*.md'
     },
     work: {
-      pattern: 'work/*.md',
-      sortBy: 'order',
-      reverse: false
+      pattern: 'work/*.md'
     }
   }))
   .use(markdown())
   .use(permalinks())
+  .use(layouts({
+    engine: 'handlebars'
+  }))
   .use(relative({
     searchFor: '../assets',
     replaceWith: '/assets'
@@ -53,23 +52,23 @@ metalsmith(__dirname)
     collections: {
       posts: {
         output: {
-          path: 'posts.json',
+          path: 'api/posts.json',
           asObject: true,
           metadata: {
             "type": "collection"
           }
         },
-        ignorekeys: ['stats', 'mode']
+        ignorekeys: ['stats', 'mode', 'next', 'previous']
       },
       work: {
         output: {
-          path: 'work.json',
+          path: 'api/work.json',
           asObject: true,
           metadata: {
             "type": "collection"
           }
         },
-        ignorekeys: ['stats', 'mode']
+        ignorekeys: ['stats', 'mode', 'next', 'previous']
       }
     }
   }))
@@ -77,12 +76,10 @@ metalsmith(__dirname)
   //   dataProperty: 'api',
   //
   // }))
-  // .use(layouts({
-  //   engine: 'handlebars'
-  // }))
+
   .use(assets({
     src: 'assets',
-    dest: '../assets'
+    dest: 'assets'
   }))
   .use(msIf(
     shouldWatch,
@@ -94,13 +91,6 @@ metalsmith(__dirname)
       }
     })
   ))
-  // .use(watch({
-  //   paths: {
-  //     "content/**/*": true,
-  //     "layouts/**/*": "**/*",
-  //     "assets/**": true
-  //   }
-  // }))
   .build(function(err, files) {
     if (err) { throw err; }
   })
