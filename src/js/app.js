@@ -6,6 +6,10 @@ import { store } from './store.js'
 
 Vue.component('highlights', require('./components/Highlights.vue'))
 Vue.component('thoughts', require('./components/Thoughts.vue'))
+Vue.component('get-in-touch', require('./components/GetInTouch.vue'))
+Vue.component('tech-stack', require('./components/TechStack.vue'))
+Vue.component('radar', require('./components/Radar.vue'))
+
 
 const app = new Vue({
   router,

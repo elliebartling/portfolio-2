@@ -6,14 +6,14 @@ layout: index.html
 # interaction designer & developer
 
 #### intro 👋🏻
-Hi, I'm Ellen. I make complicated things more accessible through interactive **design.**
+## Hi, I'm Ellen. I make complicated things more accessible through interactive **design.**
 
 I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs. Currently, I work with an amazing team at an Austin, TX creative agency called Emergent Order that’s dedicated to making awesome things, including apps, websites, digital magazines, identity + branding redesign, and any kind of video production under the sun.
 
-<highlights></highlights>
+<highlights number="2" subtitle="highlights"></highlights>
 
 #### About
-I design, develop and write  a lot.
+## I design, develop and write  a lot.
 
 In addition to designing, I also build and write — a lot. Whether I’m prototyping animations, testing the limits of potential frameworks for a project, writing creative briefs, drawing up user research reports, or crafting proposals for new clients, I’ve found that being a designer involves a lot more than designing.
 

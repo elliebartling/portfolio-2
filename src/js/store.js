@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import find from 'lodash/find'
+import filter from 'lodash/filter'
 
 Vue.use(Vuex)
 
@@ -15,6 +16,9 @@ const store = new Vuex.Store({
   getters: {
     pageByTitle: (state) => (title) => {
       return find(state.pages, { title: title })
+    },
+    getWork: (state) => {
+      return filter(state.work, { isPage: false })
     }
   },
   mutations: {

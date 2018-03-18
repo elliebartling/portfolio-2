@@ -1,23 +1,24 @@
 $red: #f1575c
 $gray-900: #182848
+$blue: #000DFF
 
-// background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+@function grid($breakpoint)
+  @return map-get($grid-breakpoints, $breakpoint)
+
 @import "node_modules/bootstrap/scss/bootstrap"
+@import "node_modules/breakpoint-sass/stylesheets/_breakpoint"
+
+@import 'components/nav'
+
 @import 'pages/home'
 @import 'pages/highlights'
 
+#app
+  overflow: hidden
+  width: 100vw
 
 main.container
   max-width: 800px
-
-header
-  background: white
-  padding: 1rem
-  .brand
-    position: relative
-    max-width: 80px
-    // left: -40px
-
 
 .fade-enter-active, .fade-leave-active
   transition: opacity .5s
@@ -26,4 +27,5 @@ header
   opacity: 0
 
 
-  
+footer
+  margin-top: 200px

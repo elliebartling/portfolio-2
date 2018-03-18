@@ -1,11 +1,11 @@
 <template>
   <div id="highlights" v-bind:class="{ rendered: rendered }">
-    <h4>Recent Projects</h4>
+    <h4>{{ subtitle }}</h4>
     <div class="row">
-      <div v-for="w in work" class="work-post">
+      <div v-for="(w, index) in work" v-if="index < number" class="work-post">
         <a :href="w.path">
           <img :src="w.image" />
-          <h3>{{ w.title }}</h3>
+          <h3 class="title">{{ w.title }}</h3>
         </a>
       </div>
     </div>
@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+  props: ['number', 'subtitle'],
   data() {
     return {
       rendered: false
@@ -20,7 +21,7 @@ export default {
   },
   computed: {
     work: function() {
-      return this.$store.state.work
+      return this.$store.getters.getWork
     }
   },
   mounted() {

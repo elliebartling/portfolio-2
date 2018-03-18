@@ -35,10 +35,10 @@ metalsmith(__dirname)
   })
   .use(collections({
     page: {
-      pattern: '*.md',
-      metadata: {
-        layout: "index.html"
-      }
+      pattern: '**/index.*',
+      sortBy: 'priority',
+      reverse: true,
+      refer: false
     },
     posts: {
       pattern: 'posts/*.md',
@@ -53,10 +53,20 @@ metalsmith(__dirname)
       }
     }
   }))
-  .use(markdown())
-  .use(permalinks())
+  .use(markdown({
+    smartypants: true,
+    gfm: true,
+    tables: true
+  }))
+  .use(permalinks({ // generate permalinks
+    pattern: ':mainCollection/:title'
+  }))
   .use(moremeta())
   .use(layouts(templateConfig))
+  .use(relative({
+    searchFor: '../../assets',
+    replaceWith: '/assets'
+  }))
   .use(relative({
     searchFor: '../assets',
     replaceWith: '/assets'
@@ -94,7 +104,8 @@ metalsmith(__dirname)
 
   .use(assets({
     src: 'assets',
-    dest: 'assets'
+    dest: 'assets',
+    replace: 'old'
   }))
   // .use(msIf(
   //   shouldWatch,
