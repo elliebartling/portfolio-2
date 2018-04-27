@@ -7,8 +7,8 @@
         <p>Send me <a href="mailto:ellenbartling@gmail.com">an email</a>.</p>
       </div>
       <div class="col">
-        <p class="lead">Download my resume</p>
-        <a href="/assets/Resume-EllenMarieBartling-Designer.pdf" class="btn btn-primary" download>Download</a>
+        <p class="lead">Resume</p>
+        <a href="https://www.dropbox.com/s/sgc1adyndh92mcm/Resume.pdf?dl=0" class="btn btn-primary">Download</a>
       </div>
     </div>
   </div>

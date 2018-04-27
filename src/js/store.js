@@ -19,6 +19,9 @@ const store = new Vuex.Store({
     },
     getWork: (state) => {
       return filter(state.work, { isPage: false })
+    },
+    getPosts: (state) => {
+      return filter(state.posts, { isPage: false })
     }
   },
   mutations: {

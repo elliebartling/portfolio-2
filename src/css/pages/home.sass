@@ -1,85 +1,17 @@
-#app
-  padding-top: 200px
-  // position: relative
 #home
-  &:after
-    content: ''
-    position: absolute
-    top: 800px
-    right: -100px
-    width: 400px
-    height: 400px
-    transform: rotate(-45deg)
-    background-image: url('/assets/noun_900127_000DFF.svg')
-
-h4
-  position: static
-  text-align: left
-  justify-content: flex-start
-  +breakpoint(grid('xl'))
-    position: relative
-    text-align: right
-    justify-content: flex-end
-  font-size: .7rem
-  font-weight: 700
-  letter-spacing: 1px
-  display: flex
-  flex-direction: row
-
-  align-items: center
-  margin-top: 4rem
-  margin-bottom: 2rem
-  color: $gray-500
-  text-transform: uppercase
-  padding-right: 20px
-  top: 56px
-  opacity: 0
-  transition: opacity 0.25s ease
-
-h4 + h2, .lead
-  font-size: 1.4rem
-  +breakpoint(grid('md'))
-    font-size: 2rem
-  line-height: 1.25
-  font-weight: 400
-  strong
-    // font-weight: 800
-    color: #000DFF
-
-h1
-  font-size: 2.5rem
-  margin-bottom: 1rem
-  +breakpoint(grid('sm'))
-    font-size: 3rem
-    margin-bottom: 1.2rem
-  +breakpoint(grid('md'))
-    font-size: 4rem
-  +breakpoint(grid('xl'))
-    font-size: 5rem
-    margin-bottom: 2rem
-
-  font-weight: 800
-  letter-spacing: -1px
-  line-height: 1.1
-  color: #000DFF
-
-p
-  position: relative
-
-p img
-  position: relative
-  width: 110%
-  left: -5%
-  right: -5%
-  margin-top: 1.5rem
-  margin-bottom: 1.5rem
-
-p > img + em
-  color: rgba($gray-900, .5)
-  font-weight: 500
-  position: relative
-  left: 0
-  right: 0
-  display: block
-  // text-align: center
-  margin-bottom: 2rem
+  padding-top: 100px
+  +breakpoint(grid('lg'))
+    padding-top: 200px
+  // position: relative
+// #home
+//   &:after
+//     content: ''
+//     position: absolute
+//     top: 800px
+//     right: -100px
+//     width: 400px
+//     height: 400px
+//     transform: rotate(-45deg)
+//     background-image: none
+//     +breakpoint(grid('xl'))
+//       background-image: url('/assets/noun_900127_000DFF.svg')

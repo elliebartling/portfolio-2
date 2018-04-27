@@ -6,15 +6,24 @@ var collections   = require('metalsmith-collections');
 var writemetadata = require('metalsmith-writemetadata');
 var metadata      = require('metalsmith-metadata');
 var watch         = require('metalsmith-watch');
-let assets        = require( 'metalsmith-assets-improved' )
+let assets        = require('./lib/lazy-assets')
 var relative      = require('./lib/relative.js')
 var msIf          = require('metalsmith-if');
 var dataLoader    = require("metalsmith-data-loader")
 var inplace       = require('metalsmith-in-place')
 var moremeta      = require('./lib/moremeta')
+var filter        = require('metalsmith-filter');
+var publish       = require('metalsmith-publish');
+var metallic = require('metalsmith-metallic');
 
-var shouldWatch = process.env.NODE_ENV == 'production' ? false : true
-console.log('Environment is ' + process.env.NODE_ENV)
+var args = require('args')
+var bearfrontmatter = require('./lib/bear-frontmatter-compatibility')
+
+args.option('watch', 'Whether or not to watch content assets for changes', false)
+const flags = args.parse(process.argv)
+
+var shouldWatch = process.env.NODE_ENV == 'production' ? false : flags.watch
+// console.log('Should watch? ' + shouldWatch)
 
 var templateConfig = {
     engine: 'handlebars',
@@ -26,13 +35,15 @@ var templateConfig = {
 metalsmith(__dirname)
   .source('./content')
   .destination('./build')
-  .clean(false)
+  .clean(true)
   .use((files, metalsmith, done) => {
     metalsmith._metadata.collections = null
     metalsmith._metadata.posts = null
     metalsmith._metadata.pages = null
     done()
   })
+  .use(filter('**/*.md', { debug: false }))
+  .use(bearfrontmatter())
   .use(collections({
     page: {
       pattern: '**/index.*',
@@ -42,35 +53,40 @@ metalsmith(__dirname)
     },
     posts: {
       pattern: 'posts/*.md',
+      sortBy: 'date',
       metadata: {
         layout: "post.html"
       }
     },
     work: {
       pattern: 'work/*.md',
+      sortBy: 'priority',
       metadata: {
         layout: 'work.html',
       }
     }
   }))
+  .use(publish())
   .use(markdown({
     smartypants: true,
     gfm: true,
     tables: true
   }))
+  .use(assets({
+    dest: 'assets',
+    assetsFolder: './assets',
+    replace: 'old'
+  }))
+  // .use(metallic())
+  // .use(mediaMetadata())
+  // .use(imageDimensions({
+  //   overwrite: true
+  // }))
   .use(permalinks({ // generate permalinks
     pattern: ':mainCollection/:title'
   }))
   .use(moremeta())
   .use(layouts(templateConfig))
-  .use(relative({
-    searchFor: '../../assets',
-    replaceWith: '/assets'
-  }))
-  .use(relative({
-    searchFor: '../assets',
-    replaceWith: '/assets'
-  }))
   .use(writemetadata({
     pattern: ['**/*'],
     ignorekeys: ['next', 'previous', 'stats', 'mode'],
@@ -96,16 +112,6 @@ metalsmith(__dirname)
         ignorekeys: ['stats', 'mode', 'next', 'previous']
       }
     }
-  }))
-  // .use(dataloader({
-  //   dataProperty: 'api',
-  //
-  // }))
-
-  .use(assets({
-    src: 'assets',
-    dest: 'assets',
-    replace: 'old'
   }))
   // .use(msIf(
   //   shouldWatch,

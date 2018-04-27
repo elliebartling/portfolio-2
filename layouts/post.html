@@ -3,7 +3,11 @@
   <div id="app">
     <main class="container" id="post">
       {{{ contents }}}
+      {{#if isPage }}
+        <thoughts number="20" subtitle="posts"></thoughts>
+      {{/if }}
     </main>
+    {{> nav }}
   </div>
 {{> footer }}
 </body>

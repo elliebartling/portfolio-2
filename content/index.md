@@ -6,13 +6,15 @@ layout: index.html
 # interaction designer & developer
 
 #### intro 👋🏻
-## Hi, I'm Ellen. I make complicated things more accessible through interactive **design.**
+## Hi, I'm Ellen. I make complex things more accessible through interactive design.
 
-I'm a huge geek for all things cognitive science, user research, economics, front-end web tech, design, branding, and dogs. Currently, I work with an amazing team at an Austin, TX creative agency called Emergent Order that’s dedicated to making awesome things, including apps, websites, digital magazines, identity + branding redesign, and any kind of video production under the sun.
+I currently work full time as a designer at [a creative agency](http://www.emergentorder.com) in Austin, TX, where I've had the opportunity to work with brands like Whole Foods Market and Webtoon on a variety of design projects.
 
-<highlights number="2" subtitle="highlights"></highlights>
+I'm always looking to meet new people and get involved in interesting things. Want to start a project or meet up with a local desiger? [Say hey!](/#get-in-touch)
 
-#### About
+<highlights number="2" subtitle="highlight reel ✨"></highlights>
+
+#### About Me
 ## I design, develop and write  a lot.
 
 In addition to designing, I also build and write — a lot. Whether I’m prototyping animations, testing the limits of potential frameworks for a project, writing creative briefs, drawing up user research reports, or crafting proposals for new clients, I’ve found that being a designer involves a lot more than designing.
@@ -27,3 +29,6 @@ Design is much more than making things beautiful; I see my job as a translator b
 <thoughts></thoughts>
 
 <get-in-touch></get-in-touch>
+
+#### About This Site
+Curious about this site? It's built on [Metalsmith](http://www.metalsmith.io/) and [Vue.js](https://vuejs.org/). Check out the[ github repository](https://github.com/elliebartling/portfolio-new) or my blog post about building it.
