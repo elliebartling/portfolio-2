@@ -35,14 +35,14 @@ PLF knew that their site could be doing more business for them, and one of their
 ## What do you do when there's no tracking? 🤔
 Unfortunately, there were almost no data from Google Analytics to work with. PLF’s old site was built using an ancient version of Blackbaud, and because of the way their platform works, there was absolutely no behavioral or waterfall data to work with. On top of which, the domain was actually split into two sites: the main Blackbaud-powered site, and a Wordpress-powered blog, running two separate instances of Google Analytics. _C’est la vie_, sometimes.
 
-![](pacific-legal-foundation/analytics-1.png)
-_All we could reliably grab from GA was demographics data — which, surprisingly, skewed WAY younger than PLF’s usual donor base. We immediately identified this as an opportunity to talk to their new target audience._
+All we could reliably grab from GA was demographics data — which, surprisingly, skewed WAY younger than PLF’s usual donor base. We immediately identified this as an opportunity to talk to their new target audience.
 
 While the timeline and the budget were extremely tight, we decided early on that without any analytics data, we’d need to conduct our own research. We set up a series of initial interviews with 8 users — 4 older millennials with a history of charitable giving, and 4 journalists at various stages of their careers.
 
 And then we got to sketching.
 
 #### Insights
+## This is why we sticky-note things.
 ### Storytelling is the most important thing
 What we heard immediately from both user groups was that storytelling was the Most Important Thing. Donors and Journalists alike were searching for compelling stories, and they walked away the millisecond jargon-y legalese got in their way of understanding _why_ something was important.
 
@@ -83,19 +83,12 @@ _The final Donation Box design. Users could still easily change the amount if th
 
 PLF assured us that a focus on small donors was key to a sustainable long-term donation pipeline, and their median donation on the website in the previous two years had been $50, so we went with $60 as our "suggested donation": it was an unusual enough amount that we could easily see if our suggestion strategy was making an impact, and sure enough, while most donations post-launch were above $60, the most frequent donation amount after launch was $60.
 
-
-## Focusing on Cases, not Issues.
-
-
-
-![](pacific-legal-foundation/ink-image-2.png)
-
 #### Outcomes
 ## How'd we do?
-Within one month of launch, Pacific Legal Foundation collected *four times* as many donations via the new website as they had in *the last twelve months combined.*
+Within one month of launch, Pacific Legal Foundation collected **four times** as many donations via the new website as they had in **the last twelve months combined.**
 
 Historically, the website had barely eked out a few thousand dollars of donations a year. 
 
 > Within 100 days of launch, the new site had drawn in six-figures worth of donations.
 
-Mission accomplished!
+Mission accomplished! 👩🏻‍🚀

@@ -3,7 +3,9 @@
     <h4>{{ subtitle }}</h4>
     <div class="row">
       <div v-for="(w, index) in work" v-if="index < number" :href="'/' + w.path" class="work-post">
-        <img :src="w.image" />
+        <a class="image-link no-decoration" :href="'/' + w.path">
+          <img :src="w.image" />
+        </a>
         <div class="details">
           <h3 class="title" v-html="widont(w.title)"></h3>
           <p class="tag">{{ w.tag }}</p>
@@ -11,6 +13,9 @@
           <a :href="'/' + w.path">Read the case study →</a>
         </div>
       </div>
+    </div>
+    <div class="row justify-content-center">
+      <a href="/work" class="btn btn-primary">See everything</a>
     </div>
   </div>
 </template>

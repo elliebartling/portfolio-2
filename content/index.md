@@ -8,11 +8,11 @@ layout: index.html
 #### intro 👋🏻
 ## Hi, I'm Ellen. I make complex things more accessible through interactive design.
 
-I currently work full time as a designer at [a creative agency](http://www.emergentorder.com) in Austin, TX, where I've had the opportunity to work with brands like Whole Foods Market and Webtoon on a variety of design projects.
+By day, I'm a Senior Designer at [a creative agency](http://www.emergentorder.com) in Austin, TX, where I've had the opportunity to work with brands like **Whole Foods Market** and **Webtoon** on a variety of design projects.
 
 I'm always looking to meet new people and get involved in interesting things. Want to start a project or meet up with a local desiger? [Say hey!](/#get-in-touch)
 
-<highlights number="2" subtitle="highlight reel ✨"></highlights>
+<highlights number="3" subtitle="highlight reel ✨"></highlights>
 
 #### About Me
 ## I design, develop and write  a lot.
