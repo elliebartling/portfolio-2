@@ -9,24 +9,35 @@ excerpt: 'Telling a complex, immersive story about animal welfare with empathy.'
 - user experience design
 - visual design
 
-In partnership with Whole Foods Market and the Humane Society of the United States, Emergent Order created a feature documentary that explores how farm animals are raised for our consumption; it’s an incredibly nuanced and gorgeous and sensitive film, and that’s what really sets it apart from its competition. It seeks to understand the conditions in which real animals live, _and_ the economic pressure that American farmers face.
+# Brief
+**Client:** Whole Foods Market & the Humane Society of the United States
 
-And after 6 months, when the last interview was filmed and the last cut was color-corrected, it was the digital team’s job to make sure people saw it.
+**The Challenge:** Tell our customers a compelling story about the real experiences of farm animals, but don't freak them out.
 
-I worked on two deliverables for the distribution & marketing campaigns: a website for the film, and the interaction design for a 3D virtual reality app that explored the farms that the filmmakers visited.
 
-The VR team concocted some 3D printing wizardry, and created their own rig out of 14 go-pro cameras; the writing team started developing a script that included the main farms from the movie; and my team began sketching.
+# Background
+In partnership with Whole Foods Market and the Humane Society of the United States, the [creative agency I work for](http://emergentorder.com) created a feature documentary that explores how farm animals are raised for our consumption; it’s an incredibly nuanced and gorgeous and sensitive film, and that’s what really sets it apart from its competition. It seeks to understand the conditions in which real animals live, *and* the economic pressure that American farmers face.
+
+I worked on two deliverables for the distribution & marketing campaigns: **a website** for the film, and the interaction design for **a 3D virtual reality app** that explored the farms that the filmmakers visited.
 
 ![](../pastes/2018-3-18 16-46-18.png)
 
-## The Challenges
-1. Americans don’t want to watch animals that are in pain. _At the Fork_ isn’t that kind of movie, and neither was any of our footage from the VR team, but it was a persistently tricky bias that we had to combat from Day 1: if people thought this was one of those movies with grainy, undercover videos of cows being abused, they didn’t want anything to do with it. We had to use design to build trust with our users as quickly as possible — and to communicate that this experience was informative, delightful, and emotionally safe. You might learn things about farm animals that made you empathize with them, but you wouldn’t feel disturbed, horrified, or grossed out.
+# Challenges
+With a tight timeline, we leaned on existing research done for the film and bootstrapped a few in-house usability tests to get familiar with the obstacles we were facing. The main challenges for this app were:
 
-2. The transition from 2D to 3D is weird, cumbersome, and can be confusing for first-time users. Part of the marketing plan involved distributing free Google Cardboards in Whole Foods Markets around the country, with QR codes stamped on them that linked to the app. We expected that most users would be first-timers, and we wanted to create a seamless and enjoyable experience, even for VR newbies.
+## People don't want to watch animals that are in pain, and they'll avoid media if they think it's going to show them something uncomfortable.
+At the Fork isn’t that kind of movie, and neither was any of our VR footage, but it was a persistently tricky bias that we had to combat from Day 1. If people thought this was one of those movies with grainy, undercover videos of cows being abused, they didn’t want anything to do with it. 
 
-3. We had a lot of stories to tell, and they needed to be modular. Our producer wanted to ensure that users who specifically wanted to learn about pigs could jump right to that part of the story. But knowing that many users wouldn’t know what they wanted to see, we also had to make sure that we provided quick access to a broader story that would be interesting to everyone.
+We knew we'd need to use design to build trust with our users as quickly as possible — and to communicate that this experience was informative, delightful, and safe. You might learn things about farm animals that made you empathize with them, but you wouldn’t feel disturbed, horrified, or grossed out.
 
-4. We didn’t yet have a design system for the film’s identity; we would need to take the film’s poster and transform it into an entire look and feel that would work across the app, a website, emails, brochures and marketing materials.
+## The transition from 2D to 3D is weird, cumbersome, and confusing for first-time users.
+Part of the marketing plan involved distributing free Google Cardboards in Whole Foods Markets around the country, with QR codes stamped on them that linked to the app. We expected that most users would be first-timers, and we wanted to create a seamless and enjoyable experience, even for VR newbies.
+
+## We had a lot of stories to tell, and they needed to be modular.
+One of our executive producers wanted to ensure that users who specifically wanted to learn about pigs could jump right to that part of the story. But knowing that many users wouldn’t know what they wanted to see, we also had to make sure that we provided quick access to a broader story that would be interesting to everyone.
+
+## We didn’t have any existing branding to work with.
+The app wasn't supposed to feel like a Whole Foods or a HSUS product — it needed to be an independent part of the film's brand. We would need to take the film’s poster and transform it into an entire look and feel that would work across the app, a website, emails, brochures and marketing materials.
 
 ![](../pastes/2018-3-18 16-46-40.png)
 

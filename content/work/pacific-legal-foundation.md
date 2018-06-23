@@ -78,7 +78,7 @@ We also wanted to help solve the problem of uncertain donation expectations. In 
 
 So we decided on a design pattern that used a single, pre-filled text box for the donation amount instead of a dropdown menu to try to streamline the process even further, and give users a strong signal of what kinds of donations we really wanted to capture.
 
-![Screenshot 2018-03-21 12.53.29](../../../../../Desktop/Screenshot 2018-03-21 12.53.29.png)
+
 _The final Donation Box design. Users could still easily change the amount if they preferred to give some other amount, but the suggested amount was clear, reasonable, and "interesting" according to our Round 2 testing subjects._
 
 PLF assured us that a focus on small donors was key to a sustainable long-term donation pipeline, and their median donation on the website in the previous two years had been $50, so we went with $60 as our "suggested donation": it was an unusual enough amount that we could easily see if our suggestion strategy was making an impact, and sure enough, while most donations post-launch were above $60, the most frequent donation amount after launch was $60.
@@ -87,7 +87,7 @@ PLF assured us that a focus on small donors was key to a sustainable long-term d
 ## How'd we do?
 Within one month of launch, Pacific Legal Foundation collected **four times** as many donations via the new website as they had in **the last twelve months combined.**
 
-Historically, the website had barely eked out a few thousand dollars of donations a year. 
+Historically, the website had barely eked out a few thousand dollars of donations a year.
 
 > Within 100 days of launch, the new site had drawn in six-figures worth of donations.
 

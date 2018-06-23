@@ -7,8 +7,8 @@
           <img :src="w.image" />
         </a>
         <div class="details">
-          <h3 class="title" v-html="widont(w.title)"></h3>
           <p class="tag">{{ w.tag }}</p>
+          <h3 class="title" v-html="widont(w.title)"></h3>
           <p>{{ w.excerpt }}</p>
           <a :href="'/' + w.path">Read the case study →</a>
         </div>
