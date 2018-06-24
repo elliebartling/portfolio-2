@@ -15,6 +15,8 @@ var moremeta      = require('./lib/moremeta')
 var filter        = require('metalsmith-filter');
 var publish       = require('metalsmith-publish');
 var metallic = require('metalsmith-metallic');
+var replace = require('metalsmith-text-replace');
+
 
 var args = require('args')
 var bearfrontmatter = require('./lib/bear-frontmatter-compatibility')
@@ -72,6 +74,32 @@ metalsmith(__dirname)
     gfm: true,
     tables: true
   }))
+  .use(replace({
+    '**/**': [
+      {
+        find: /\[row\]/g,
+        replace: "<div class='row'>"
+      },{
+        find: /\[row center\]/g,
+        replace: "<div class='row align-items-center'>"
+      },{
+        find: /\[row narrow\]/g,
+        replace: "<div class='row narrow'>"
+      },{
+        find: /\[col\]/g,
+        replace: "<div class='col'>"
+      },{
+        find: /\[\/col\]/g,
+        replace: "</div>"
+      },{
+        find: /\[\/row\]/g,
+        replace: "</div>"
+      },{
+        find: /\[spacer\]/g,
+        replace: "<div class='spacer'></div>"
+      }
+    ]
+    }))
   .use(assets({
     dest: 'assets',
     assetsFolder: './assets',
@@ -113,16 +141,16 @@ metalsmith(__dirname)
       }
     }
   }))
-  // .use(msIf(
-  //   shouldWatch,
-  //   watch({
-  //     paths: {
-  //       "content/**/*": true,
-  //       "layouts/**/*": "**/*",
-  //       "assets/**": true
-  //     }
-  //   })
-  // ))
+  .use(msIf(
+    shouldWatch,
+    watch({
+      paths: {
+        "content/**/*": true,
+        "layouts/**/*": "**/*",
+        "assets/**": true
+      }
+    })
+  ))
   .build(function(err, files) {
     if (err) { throw err; }
   })

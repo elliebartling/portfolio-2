@@ -31,6 +31,8 @@
     "metalsmith-prism": "^3.1.1",
     "metalsmith-project-images": "^1.1.2",
     "metalsmith-publish": "^0.1.5",
+    "metalsmith-replace": "^1.0.0",
+    "metalsmith-text-replace": "^1.0.1",
     "moment": "^2.21.0",
     "path": "^0.12.7",
     "vue": "^2.5.16",

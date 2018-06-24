@@ -5,13 +5,14 @@
       <div v-for="(w, index) in work" v-if="index < number" :href="'/' + w.path" class="work-post">
         <a class="image-link no-decoration" :href="'/' + w.path">
           <img :src="w.image" />
+          <div class="details">
+            <!-- <p class="tag">{{ w.tag }}</p> -->
+            <!-- <p class="client">Client: {{ w.client }}</p> -->
+            <h3 class="title" v-html="widont(w.title)"></h3>
+            <p>{{ w.excerpt }}</p>
+            <!-- <a :href="'/' + w.path">Read the case study →</a> -->
+          </div>
         </a>
-        <div class="details">
-          <!-- <p class="tag">{{ w.tag }}</p> -->
-          <h3 class="title" v-html="widont(w.title)"></h3>
-          <p>{{ w.excerpt }}</p>
-          <!-- <a :href="'/' + w.path">Read the case study →</a> -->
-        </div>
       </div>
     </div>
     <!-- <div class="row justify-content-center">

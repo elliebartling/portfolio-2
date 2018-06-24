@@ -1,13 +1,19 @@
 {{> head }}
 <body>
   <div id="app">
+    {{#if isPage }}
+    {{ else }}
+    <div class="banner-image">
+      <img src={{image}} />
+    </div>
+    {{/if}}
     <main class="container" id="work">
-      {{#if isPage }}
+      <!-- {{#if isPage }}
       {{ else }}
         <div class="breadcrumbs">
           <p><a href="/work">← <span class="parent">work</span></a><span class="divider"> / </span><span class="title">{{ title }}<span></p>
         </div>
-      {{/if }}
+      {{/if }} -->
       {{{ contents }}}
       {{#if isPage }}
         <highlights number="20" subtitle="projects"></highlights>

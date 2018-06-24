@@ -1,7 +1,8 @@
 ---
-title: 'Pacific Legal Foundation'
+title: 'Non-Profit Redesign'
+client: 'Pacific Legal Foundation'
 tag: 'website redesign'
-image: '/assets/pacific-legal-foundation_featured.png'
+image: '/assets/mockup-plf-featured.jpg'
 priority: 2
 excerpt: "Redesigning a non-profit law firm's website to communicate their brand and help donors contribute."
 ---
