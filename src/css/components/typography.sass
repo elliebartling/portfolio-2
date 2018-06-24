@@ -2,10 +2,10 @@
   position: static
   text-align: left
   justify-content: flex-start
-  +breakpoint(grid('xl'))
-    position: relative
-    text-align: right
-    justify-content: flex-end
+  // +breakpoint(grid('xl'))
+  //   position: relative
+  //   text-align: right
+  //   justify-content: flex-end
   font-size: .7rem
   font-weight: 700
   letter-spacing: 1px
@@ -18,13 +18,14 @@
   text-transform: uppercase
   padding-right: 20px
   top: 2.5rem
-  opacity: 0
-  transition: opacity 0.25s ease
+  // opacity: 0
+  // transition: opacity 0.25s ease
 
 h2
   margin-top: 2.5rem
   margin-bottom: 1.2rem
   font-weight: 800
+  color: $black
 
 #work h3
   font-size: 1rem
@@ -112,7 +113,8 @@ p
   font-size: 1.15rem
   position: relative
   line-height: 1.7
-  letter-spacing: -0.25px
+  letter-spacing: -0.15px
+  color: lighten($black, 30%)
 
 p img
   position: relative

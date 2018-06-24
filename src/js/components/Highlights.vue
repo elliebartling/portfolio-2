@@ -7,16 +7,16 @@
           <img :src="w.image" />
         </a>
         <div class="details">
-          <p class="tag">{{ w.tag }}</p>
+          <!-- <p class="tag">{{ w.tag }}</p> -->
           <h3 class="title" v-html="widont(w.title)"></h3>
           <p>{{ w.excerpt }}</p>
-          <a :href="'/' + w.path">Read the case study →</a>
+          <!-- <a :href="'/' + w.path">Read the case study →</a> -->
         </div>
       </div>
     </div>
-    <div class="row justify-content-center">
+    <!-- <div class="row justify-content-center">
       <a href="/work" class="btn btn-primary">See everything</a>
-    </div>
+    </div> -->
   </div>
 </template>
 <script>

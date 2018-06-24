@@ -2,6 +2,15 @@
   opacity: 0
   max-height: 0px
   transition: all ease 1s
+  width: 100vw
+  position: relative
+  left: calc(-50% + 30px)
+
+  h4
+    text-align: center
+    margin: auto
+    margin-bottom: 50px
+    margin-top: 50px
 
 #highlights.rendered
   opacity: 1
@@ -9,19 +18,29 @@
   transition: all ease 1s
 
 #highlights
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
   .work-post
-    @extend .col-12
-    margin-bottom: 3rem
+    width: 50%
+    margin-bottom: 0rem
     display: flex
     flex-direction: column
     +breakpoint(grid('md'))
       flex-direction: column
     justify-content: flex-start
     align-items: center
+    position: relative
 
     .details
-      width: 100%
+      width: 80%
       padding-left: 0px
+      margin: auto
+      position: absolute
+      opacity: 0
+      top: 50%
+      transform: translateY(-50%)
+      text-align: center
       +breakpoint(grid('md'))
         // width: 40%
         padding-left: 40px
@@ -34,10 +53,14 @@
     border-bottom: none !important
     &:hover
       img
-        transform: scale(1.02)
-        box-shadow: 0px 10px 20px rgba($black, .2)
+        opacity: 0.2
+        // transform: scale(1.02)
+        // box-shadow: 0px 10px 20px rgba($black, .2)
         transition: all 0.25s ease
-        margin-bottom: 2rem
+        // margin-bottom: 2rem
+  .image-link:hover + .details
+    opacity: 1
+    transition: all ease 0.5s
 
   .work-post:hover
     text-decoration: none
@@ -53,7 +76,7 @@
     +breakpoint(grid('md'))
       // max-width: 60%
     margin-bottom: 1.5rem
-    border-radius: 4px
+    // border-radius: 4px
     transition: all 0.25s ease
     // border: 6px dashed $blue
 
