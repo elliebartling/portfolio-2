@@ -44,7 +44,7 @@ metalsmith(__dirname)
     metalsmith._metadata.pages = null
     done()
   })
-  .use(filter('**/*.md', { debug: false }))
+  .use(filter('**/*.md', { debug: true }))
   .use(bearfrontmatter())
   .use(collections({
     page: {
@@ -83,8 +83,8 @@ metalsmith(__dirname)
         find: /\[row center\]/g,
         replace: "<div class='row align-items-center'>"
       },{
-        find: /\[row narrow\]/g,
-        replace: "<div class='row narrow'>"
+        find: /\[row resume\]/g,
+        replace: "<div class='row resume'>"
       },{
         find: /\[col\]/g,
         replace: "<div class='col'>"

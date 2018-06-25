@@ -11,8 +11,6 @@ excerpt: 'Telling a complex, immersive story about animal welfare with empathy.'
 - visual design
 - user testing
 
-*[At the Fork](http://www.attheforkfilm.com)* is a feature-length documentary made in partnership with **Whole Foods Market** and **the Humane Society of the United States** that explores how farm animals are raised for our consumption.
-
 As part of the impact campaign for the documentary *[At the Fork](https://attheforkfilm.com)*, I worked on a 360-degree **virtual reality app** that lets users immerse themselves in the environments they see in the movie.
 
 # Brief
