@@ -34,6 +34,7 @@ body
     padding-left: 0px
     display: flex
     flex-direction: row
+    flex-wrap: wrap
     li
       text-transform: uppercase
       font-weight: 700
@@ -41,39 +42,31 @@ body
       font-size: 0.8rem
       letter-spacing: 1px
       margin-right: 20px
-      margin-bottom: 20px
+      margin-bottom: 5px
 
   ul:first-of-type + p
     font-size: 1.5rem
     color: $black
-  // h1
-  //   border-top: 3px solid $black
-  //   padding-top: 40px
+
   #brief
     font-family: $font-family-sans-serif
-    // font-size: 3rem
-    // font-style: italic
-    // display: inline-block
     border-top: 3px solid $black
     padding-top: 40px
-    // left: -5%
-  // h2#client, h2#the-challenge, h2#platforms, h2#my-role
-  // @extend %special
+
   #brief + ul
     display: block
     padding-left: 0px
     list-style: none
     position: relative
-    left: 30%
-    top: -120px
-    margin-bottom: -100px
-    // background: $gray-100
-    padding: 40px
-    padding-top: 1px
-    padding-right: 0px
-    width: 70%
-    // flex-direction: row
-    // flex-wrap: wrap
+    +breakpoint(grid('md'))
+      left: 30%
+      top: -120px
+      margin-bottom: -100px
+      padding: 40px
+      padding-top: 1px
+      padding-right: 0px
+      width: 70%
+
     > li
       display: block
       // width: 70%
@@ -133,9 +126,12 @@ body
 
 #work .row
   position: relative
-  width: 150%
-  left: -25%
-  right: -25%
+  display: block
+  +breakpoint(grid('xl'))
+    display: flex
+    width: 150%
+    left: -25%
+    right: -25%
   img
     width: 100%
     left: 0
