@@ -21,11 +21,8 @@ He makes a lot of interesting points, but the one that's always stuck with me is
 I often joke with my friends that design is only sometimes about saving the world; the rest of the time, it's about saving 10 minutes a day for the people who're going to figure out how to save the world 10 minutes a day faster.  I really love the idea that great design, no matter how small, can have a huge impact on the world.
 
 [row resume][col]
-
 ## Experience
-
 [/col][col]
-
 **Senior Designer, Emergent Order (2017 — Present)**
 
 Design and strategic lead for interactive project teams. Researched, designed, and launched flagship products for national non-profit organizations and startups. Managed teams of 6+ designers and developers. Produced interactive prototypes, proposals, creative and strategic briefs, design research reports, and client presentations.
@@ -37,7 +34,6 @@ Designed, built, and managed interactive digital experiences for in-house and cl
 **Communications Associate, Texas Public Policy Foundation (2013 — 2014)**
 
 Designed graphics, documents, presentations, and posters. Managed and art-directed the website and social media. Founded the in-house analytics program, and project managed the client side of an award-winning website redesign.
-
 [/col][/row]
 
 [row resume][col]
@@ -62,4 +58,4 @@ BA in Evolutionary Biology, BA in Literature
 **General Assembly**
 
 Visual Design Course
-[/col][/row]
+[/col][/row] &nbsp; 

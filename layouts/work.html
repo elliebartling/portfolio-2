@@ -8,16 +8,18 @@
     </div>
     {{/if}}
     <main class="container" id="work">
-      <!-- {{#if isPage }}
-      {{ else }}
-        <div class="breadcrumbs">
-          <p><a href="/work">← <span class="parent">work</span></a><span class="divider"> / </span><span class="title">{{ title }}<span></p>
-        </div>
-      {{/if }} -->
       {{{ contents }}}
-      {{#if isPage }}
-        <highlights number="20" subtitle="projects"></highlights>
-      {{/if }}
+
+      <div id="next-up">
+      <div class="next-title">
+        <h4>Next:</h4>
+      </div>
+      {{#each collections.work}}
+        {{#unless index}}
+          <a href="/{{this.path}}" class="{{#equal this.path ../path }}active{{/equal}}">{{ title }}</a>
+        {{/unless}}
+      {{/each}}
+      </div>
     </main>
     {{> nav }}
   </div>

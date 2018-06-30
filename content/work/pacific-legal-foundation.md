@@ -1,15 +1,10 @@
 ---
 
-title: 'Non-Profit Redesign'
-
+title: 'Redesigning the Donation Process'
 client: 'Pacific Legal Foundation'
-
 tag: 'website redesign'
-
 image: '/assets/mockup-plf-featured.jpg'
-
 priority: 2
-
 excerpt: "Redesigning a non-profit law firm's website to communicate their brand and help donors contribute."
 
 ---
@@ -18,6 +13,13 @@ excerpt: "Redesigning a non-profit law firm's website to communicate their brand
 - User Experience Design
 - Visual Design
 - Project Management
+
+# Brief
+
+- **Client**
+  - Pacific Legal Foundation, the first libertarian public interest law firm in the United States.
+- **The Challenge**
+  - Transform their web properties into a single, easy-to-navigate, donor-focused communications tool for their new brand identity.
 
 # **Sometimes, you just have to see how far the mess goes.**
 
@@ -57,8 +59,6 @@ All we could reliably grab from GA was demographics data — which, surprisingly
 
 While the timeline and the budget were extremely tight, we decided early on that without any analytics data, we’d need to conduct our own research. We set up a series of initial interviews with 8 users — 4 older millennials with a history of charitable giving, and 4 journalists at various stages of their careers.
 
-And then we got to sketching.
-
 # **This is why we sticky-note things.**
 
 #### **Insights**
@@ -69,7 +69,7 @@ What we heard immediately from both user groups was that storytelling was the Mo
 
 ## **People just want to know what you expect**
 
-One surprising insight we found during the initial interviews that that even really enthusiastic donors frequently didn’t know how much they were expected to donate — and that this was a surprisingly big barrier to donating at all. Once someone had decided to donate, we heard over and over that feelings of shame or confusion about donating the wrong amount (specifically, less than the expected amount) prevented a handful of users from donating at all. We saw this as a huge opportunity to help the organization and enthusiastic donors communicate with each other better, and would hopefully improve conversion rates.
+One surprising insight we found during the initial interviews was that even really enthusiastic donors frequently didn’t know how much they were expected to donate — and that this was a surprisingly big barrier to donating at all. Once someone had decided to donate, we heard over and over that feelings of shame or confusion about donating the wrong amount (specifically, less than the expected amount) prevented a handful of users from donating at all. We saw this as a huge opportunity to help the organization and enthusiastic donors communicate with each other better, and would hopefully improve conversion rates.
 
 ![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6f7e41ce-d34d-4625-b5cb-d24dc084cfba%2FIMG_6583.JPG)
 
@@ -86,6 +86,10 @@ Though PLF is an ideologically-driven organization, we found that most of our in
 Alongside the initial interviews, we produced three different moodboards to hone in on the how PLF’s branding would be implemented on the new site. Our company’s brand identity team had worked with them on a new logo, but it was our job to take the new identity and create an entire visual design system around it.
 
 They wanted to be edgy, aggressive, modern, and high-energy. They wanted to be respected and professional and buttoned-up, but with just a tiny little hint of “my-way-or-see-you-in-court-motha-f*ers.” They had 45 years of history that they cherished and which informed their company culture — but they also wanted to look forward to the future, and show how innovative and non-traditional they were in their work.
+
+![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa296875a-4542-4193-a088-830444a5739e%2Fsmartmockups_jiukegn0.jpg)
+
+*A few selects from our moodboards.*
 
 We came up with an aesthetic based around color-blocking: using bright colors and tons of photos to bring a vividness and modern feel to their brand, while keeping the storytelling focus that our user research indicated was so crucial.
 
@@ -113,10 +117,8 @@ PLF assured us that a focus on small donors was key to a sustainable long-term d
 
 #### **Outcomes**
 
-Within one month of launch, Pacific Legal Foundation collected ****four times**** as many donations via the new website as they had in ****the last twelve months combined.****
+Despite an aggressive timeline, we completed the project on time and within budget. But more importantly: within the first month, Pacific Legal Foundation collected ****four times**** as much donation revenue via the new website as they had in ****the last twelve months combined.**** Over the course of six months, they saw a sustained increase of roughly 1,000% in donation revenue.
 
-Historically, the website had barely eked out a few thousand dollars of donations a year.
-
-> Within 100 days of launch, the new site had drawn in six-figures worth of donations.
+> 4,900% increase in revenue in the first month.
 
 Mission accomplished! 👩🏻‍🚀

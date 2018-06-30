@@ -1,5 +1,5 @@
 ---
-title: 'Virtual Reality App'
+title: 'Animal Welfare in VR'
 tag: 'virtual reality'
 client: 'Whole Foods Market & HSUS'
 priority: 1

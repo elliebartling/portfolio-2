@@ -8,7 +8,7 @@
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "build": "node build.js --watch",
     "buildonce": "node build.js",
-    "deploy": "NODE_ENV=production node build.js && yarn run production && surge --project ./build --domain ellenbartling.surge.sh"
+    "deploy": "NODE_ENV=production node build.js && yarn run production && surge --project ./build --domain http://ellenbartling.com"
   },
   "git": {
     "scripts": {}

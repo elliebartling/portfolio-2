@@ -14,12 +14,22 @@ var inplace       = require('metalsmith-in-place')
 var moremeta      = require('./lib/moremeta')
 var filter        = require('metalsmith-filter');
 var publish       = require('metalsmith-publish');
-var metallic = require('metalsmith-metallic');
-var replace = require('metalsmith-text-replace');
-
-
-var args = require('args')
+var metallic      = require('metalsmith-metallic');
+var replace       = require('metalsmith-text-replace');
+var args          = require('args')
 var bearfrontmatter = require('./lib/bear-frontmatter-compatibility')
+var Handlebars    = require('handlebars')
+
+Handlebars.registerHelper('equal', function(lvalue, rvalue, options) {
+    if (arguments.length < 3)
+        throw new Error("Handlebars Helper equal needs 2 parameters");
+    if( lvalue!=rvalue ) {
+        return options.inverse(this);
+    } else {
+        return options.fn(this);
+    }
+});
+
 
 args.option('watch', 'Whether or not to watch content assets for changes', false)
 const flags = args.parse(process.argv)
@@ -44,7 +54,7 @@ metalsmith(__dirname)
     metalsmith._metadata.pages = null
     done()
   })
-  .use(filter('**/*.md', { debug: true }))
+  .use(filter('**/*.md', { debug: false }))
   .use(bearfrontmatter())
   .use(collections({
     page: {
