@@ -3,7 +3,7 @@
 title: 'The Texas Millennial Institute'
 client: 'The Texas Millennial Institute'
 tag: 'brand identity'
-image: '/assets/smartmockups_jiuxivnl.jpg'
+image: '/assets/tmi-smartmockups_jiuxivnl.jpg'
 priority: 3
 excerpt: "Designing a brand identity for a new kind of non-profit."
 
@@ -21,7 +21,7 @@ There are a ton of educational public policy organizations that want to talk to 
 - **The Challenge**
   - Create a flexible, iconic brand identity that would appeal to Millennials, build trust with grant-making organizations, and not take itself *too* seriously.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fedbe7532-70d7-4b17-9f79-30be0c7d4c7c%2Fsmartmockups_jiuxq0y0.jpg)
+![](../../assets/tmi-smartmockups_jiuxq0y0.jpg)
 
 *TMI’s first website, with their old logo.*
 
@@ -29,7 +29,7 @@ There are a ton of educational public policy organizations that want to talk to 
 
 One of the interesting challenges of working with educational non-profit organizations is that they have to serve two masters: their readers, and their donors (who are frequently not the same people). For TMI, this meant their branding needed to be playful, fun, and genuinely “Millennial” — but it also needed to signal that they were the kind of organization that was serious and professional enough to be trusted with grants and donations. Balancing this line was especially important for TMI, whose entire organization is run by younger officers, and whose mission is to host events that genuinely engage with issues that Texan millennials care about.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc92a5a8e-3ed3-4a00-ba56-aa46e2204c4d%2FScreenshot2018-06-2519.15.17.png)
+![](../../assets/tmi-whatwouldtexassay.png)
 
 *I tasked the board with answering the question, "What would Texas say if it were a millennial?" They sent me their favorite posts from Texts From Last Night.*
 
@@ -37,11 +37,11 @@ After a few back-and-forths over how to balance the line between professionalism
 
 [row][col]
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa9c31de4-8cb8-4241-818e-9140a3ca48aa%2Fsmartmockups_jiuy5ama.jpg)
+![](../../assets/tmi-smartmockups_jiuy5ama.jpg)
 
 *Blue logo on white. [/col][col]*
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F70bd20c4-4ba5-450c-8207-108c4e95c825%2Fsmartmockups_jiuybzq6.jpg)
+![](../../assets/tmi-smartmockups_jiuybzq6.jpg)
 
 *White logo on blue.*
 
@@ -53,10 +53,10 @@ In TMI’s extended branding kit, the mark becomes extremely flexible: it’s re
 
 A few examples of extended branding that I produced for them:
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F7b04b387-234f-470e-9f2e-c42dea154227%2Fsmartmockups_jiuxivnl.jpg)
+![](../../assets/tmi-smartmockups_jiuxivnl.jpg)
 
 *An ad for TMI’s new brand, allowing participants in their summits to show the topics they care about.*
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff0c8f4d6-8b92-4958-98f1-ae86778cca13%2Fsmartmockups_jivr5lvy.jpg)
+![](../../assets/tmi-smartmockups_jivr5lvy.jpg)
 
-*Two event banners for their upcoming Immigration and Foreign Policy summits.*
+*Two event banners for their upcoming Immigration and Foreign Policy summits.*  

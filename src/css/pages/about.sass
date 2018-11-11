@@ -6,8 +6,13 @@
     border-top: 2px solid $black
     margin-top: 100px
     padding-top: 40px
+    display: block
+    +breakpoint(grid('md'))
+      display: flex
     .col:first-child
-      max-width: 30%
+      +breakpoint(grid('md'))
+
+        max-width: 30%
     strong
       @extend %special
       margin-top: 5px
@@ -24,3 +29,4 @@
     max-width: 130%
     margin-top: 2rem
     margin-bottom: 2rem
+ 

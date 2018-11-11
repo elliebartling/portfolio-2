@@ -3503,6 +3503,15 @@ fs-extra@^5.0.0:
     jsonfile "^4.0.0"
     universalify "^0.1.0"
 
+fs-extra@~0.10.0:
+  version "0.10.0"
+  resolved "http://registry.npmjs.org/fs-extra/-/fs-extra-0.10.0.tgz#99c0ec2fd5eaaad9d646245e4b014b56729982af"
+  dependencies:
+    jsonfile "^1.2.0"
+    mkdirp "^0.5.0"
+    ncp "^0.5.1"
+    rimraf "^2.2.8"
+
 fs-extra@~0.26.5:
   version "0.26.7"
   resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-0.26.7.tgz#9ae1fdd94897798edab76d0918cf42d0c3184fa9"
@@ -4887,6 +4896,10 @@ json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
+jsonfile@^1.2.0:
+  version "1.2.0"
+  resolved "http://registry.npmjs.org/jsonfile/-/jsonfile-1.2.0.tgz#5f35d6cd9f946ec97b5b18353fa9e58df1b86f6a"
+
 jsonfile@^2.1.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-2.4.0.tgz#3736a2b428b87bbda0cc83b53fa3d633a35c2ae8"
@@ -5626,6 +5639,14 @@ metalsmith-replace@^1.0.0:
   dependencies:
     applause "^1.2.2"
 
+metalsmith-static@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/metalsmith-static/-/metalsmith-static-0.0.5.tgz#c0f51305ae75442faa0e1652657ef2c22406ba2f"
+  dependencies:
+    debug "~0.7.4"
+    fs-extra "~0.10.0"
+    ncp "~0.5.0"
+
 metalsmith-text-replace@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/metalsmith-text-replace/-/metalsmith-text-replace-1.0.1.tgz#837c13053db688f8fc07897068015e1a6138a974"
@@ -5964,6 +5985,10 @@ ncname@1.0.x:
 ncp@0.4.x:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/ncp/-/ncp-0.4.2.tgz#abcc6cbd3ec2ed2a729ff6e7c1fa8f01784a8574"
+
+ncp@^0.5.1, ncp@~0.5.0:
+  version "0.5.1"
+  resolved "http://registry.npmjs.org/ncp/-/ncp-0.5.1.tgz#743985316e3db459281b587169e845735a05439f"
 
 negotiator@0.6.1:
   version "0.6.1"

@@ -6,8 +6,10 @@ var collections   = require('metalsmith-collections');
 var writemetadata = require('metalsmith-writemetadata');
 var metadata      = require('metalsmith-metadata');
 var watch         = require('metalsmith-watch');
-let assets        = require('./lib/lazy-assets')
-var relative      = require('./lib/relative.js')
+
+var asset         = require('metalsmith-static');
+// var relative      = require('./lib/relative.js')
+var relAssets     = require('./lib/best-assets.js')
 var msIf          = require('metalsmith-if');
 var dataLoader    = require("metalsmith-data-loader")
 var inplace       = require('metalsmith-in-place')
@@ -54,6 +56,11 @@ metalsmith(__dirname)
     metalsmith._metadata.pages = null
     done()
   })
+  .use(asset({
+    "src": "assets",
+    "dest": "./assets"
+  }))
+  .use(relAssets())
   .use(filter('**/*.md', { debug: false }))
   .use(bearfrontmatter())
   .use(collections({
@@ -84,6 +91,7 @@ metalsmith(__dirname)
     gfm: true,
     tables: true
   }))
+  // .use(relAssets())
   .use(replace({
     '**/**': [
       {
@@ -110,16 +118,6 @@ metalsmith(__dirname)
       }
     ]
     }))
-  .use(assets({
-    dest: 'assets',
-    assetsFolder: './assets',
-    replace: 'old'
-  }))
-  // .use(metallic())
-  // .use(mediaMetadata())
-  // .use(imageDimensions({
-  //   overwrite: true
-  // }))
   .use(permalinks({ // generate permalinks
     pattern: ':mainCollection/:title'
   }))

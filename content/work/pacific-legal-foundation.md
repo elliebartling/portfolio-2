@@ -1,12 +1,10 @@
 ---
-
-title: 'Redesigning the Donation Process'
+title: 'Pacific Legal Foundation'
 client: 'Pacific Legal Foundation'
 tag: 'website redesign'
 image: '/assets/mockup-plf-featured.jpg'
-priority: 2
-excerpt: "Redesigning a non-profit law firm's website to communicate their brand and help donors contribute."
-
+priority: 4
+excerpt: "Redesigning a pro-bono law firm website to communicate their brand and help donors contribute."
 ---
 
 - Research & Strategy
@@ -17,9 +15,23 @@ excerpt: "Redesigning a non-profit law firm's website to communicate their brand
 # Brief
 
 - **Client**
-  - Pacific Legal Foundation, the first libertarian public interest law firm in the United States.
+  - Pacific Legal Foundation, a 45 year old non-profit public interest law firm with a long history of important precedents set and wins at the Supreme Court.
 - **The Challenge**
   - Transform their web properties into a single, easy-to-navigate, donor-focused communications tool for their new brand identity.
+- **My Role**
+  - I led the design for the site, including managing a team of 2 other designers, through research, user testing, UX/UI design, visual design (in collaboration with the branding team), and QA. I also managed the development team.
+
+[row][col]
+
+![](../../assets/plf-smartmockups_jiueq5jy.jpg)
+
+*Before: three different levels of navigation, a login feature that doesn't do anything, and lots of sidebar ads that aren't ads.* [/col][col]
+
+![](../../assets/plf-smartmockups_jiueu1fd.jpg)
+
+*After: donation-focused, story-driven, modern.*
+
+[/col][/row]
 
 # **Sometimes, you just have to see how far the mess goes.**
 
@@ -29,21 +41,9 @@ Pacific Legal Foundation is a non-profit law firm that defends Americans against
 
 Their website hadn’t been updated in quite some time, and wasn’t reflective of their cutting-edge work in the legal field. Their staff hated it, their donors hated it, and pretty much every stakeholder we talked to thought it was a “total mess.”
 
-[row][col]
-
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ff573bbdc-e9a0-4134-a167-7f02a4163487%2Fsmartmockups_jiueq5jy.jpg)
-
-*Before: three different levels of navigation, a login feature that doesn't do anything, and lots of sidebar ads that aren't ads.* [/col][col]
-
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa1906f25-5e2b-47c0-a61c-b1ba4ecc91fa%2Fsmartmockups_jiueu1fd.jpg)
-
-*After: donation-focused, story-driven, modern.*
-
-[/col][/row]
-
 The most immediately pressing concern for me was how un-discoverable their content was. The more I clicked around, the more links I found that took users in circular UX patterns, or offsite completely.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Ffbcecdcd-9e24-4cc4-a238-b98d405df3c3%2Fcurrent-pacificlegal-map.png)
+![](../../assets/plf-current-pacificlegal-map.png)
 
 *A mind-map of all the pages and links of the old site. Yellow lines show where main navigational links take users to other sites. There's even an endless navigational loop between the donate page and the legacy donate website.*
 
@@ -71,7 +71,7 @@ What we heard immediately from both user groups was that storytelling was the Mo
 
 One surprising insight we found during the initial interviews was that even really enthusiastic donors frequently didn’t know how much they were expected to donate — and that this was a surprisingly big barrier to donating at all. Once someone had decided to donate, we heard over and over that feelings of shame or confusion about donating the wrong amount (specifically, less than the expected amount) prevented a handful of users from donating at all. We saw this as a huge opportunity to help the organization and enthusiastic donors communicate with each other better, and would hopefully improve conversion rates.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6f7e41ce-d34d-4625-b5cb-d24dc084cfba%2FIMG_6583.JPG)
+![](../../assets/plf-IMG_6583.jpeg)
 
 *Obligatory UX mapping process involving lots of stickies.*
 
@@ -87,7 +87,7 @@ Alongside the initial interviews, we produced three different moodboards to hone
 
 They wanted to be edgy, aggressive, modern, and high-energy. They wanted to be respected and professional and buttoned-up, but with just a tiny little hint of “my-way-or-see-you-in-court-motha-f*ers.” They had 45 years of history that they cherished and which informed their company culture — but they also wanted to look forward to the future, and show how innovative and non-traditional they were in their work.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa296875a-4542-4193-a088-830444a5739e%2Fsmartmockups_jiukegn0.jpg)
+![](../../assets/plf-smartmockups_jiukegn0.jpg)
 
 *A few selects from our moodboards.*
 
@@ -99,7 +99,7 @@ We came up with an aesthetic based around color-blocking: using bright colors an
 
 Since the client's major KPI for the website was radically increasing and modernizing their donation pathway, we took on the challenge of taking their 5-step, 27-field donation process and reducing it down to just 4 fields.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F411be20a-b4d6-41cf-a9e8-3734a0a2ebdc%2Fink-image.png)
+![](../../assets/plf-ink-image.png)
 
 *An early donation sketch, moving the request for a mailing address to ****after**** the donation was completed.*
 
@@ -107,9 +107,15 @@ We also wanted to help solve the problem of uncertain donation expectations. In 
 
 So we decided on a design pattern that used a single, pre-filled text box for the donation amount instead of a dropdown menu to try to streamline the process even further, and give users a strong signal of what kinds of donations we really wanted to capture.
 
-![](https://www.notion.so/file/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fcef452f1-95ba-48bd-9f2b-69b4692e0af4%2FA20F13E3-FB0F-49BE-9C38-D84ADE2DD5EA.png)
+![](../../assets/plf-A20F13E3-FB0F-49BE-9C38-D84ADE2DD5EA.png)
 
 *The final Donation Box design. Users could still easily change the amount if they preferred to give some other amount, but the suggested amount was clear, reasonable, and "interesting" according to our Round 2 testing subjects.*
+
+![](../../assets/plf-smartmockups_jj2z0w07.jpg)
+
+*Left: The case page (scrolled just below the fold), with a short overview at the top of "What's at stake?", and a Case Timeline in the right-hand sidebar to give context without distracting from the story.*
+
+*Right: A blog post design, with a link back to the relevant case to see more of the story.*
 
 PLF assured us that a focus on small donors was key to a sustainable long-term donation pipeline, and their median donation on the website in the previous two years had been $50, so we went with $60 as our "suggested donation": it was an unusual enough amount that we could easily see if our suggestion strategy was making an impact, and sure enough, while most donations post-launch were above $60, the most frequent donation amount after launch was $60.
 
@@ -121,4 +127,4 @@ Despite an aggressive timeline, we completed the project on time and within budg
 
 > 4,900% increase in revenue in the first month.
 
-Mission accomplished! 👩🏻‍🚀
+Mission accomplished! 👩🏻‍🚀   
