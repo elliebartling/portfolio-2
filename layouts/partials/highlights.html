@@ -1,0 +1,18 @@
+<div id="highlights">
+  <h4>highlight reel ✨</h4>
+  <div class="row">
+    {{#each collections.work}}
+    {{#unless index}}
+      <div class="work-post">
+        <a class="image-link no-decoration" href="/{{this.path}}">
+          <img src="{{this.image}}" />
+          <div class="details">
+            <h3 class="title">{{this.title}}</h3>
+            <p>{{ this.excerpt }}</p>
+          </div>
+        </a>
+      </div>
+    {{/unless}}
+    {{/each}}
+  </div>
+</div>

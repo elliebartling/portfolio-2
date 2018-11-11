@@ -14,14 +14,7 @@ export default {
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      var dom = this.$el
-      var subheads = dom.getElementsByTagName('h4')
-      for (var i = 0; i < subheads.length; i++) {
-        var width = subheads[i].offsetWidth
-        subheads[i].style.left = `${-1 * width}px`
-      }
-    })
+    
   }
 }
 </script>

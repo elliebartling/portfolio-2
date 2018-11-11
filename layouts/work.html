@@ -1,0 +1,28 @@
+{{> head }}
+<body>
+  <div id="app">
+    {{#if isPage }}
+    {{ else }}
+    <div class="banner-image">
+      <img src={{image}} />
+    </div>
+    {{/if}}
+    <main class="container" id="work">
+      {{{ contents }}}
+
+      <div id="next-up">
+      <div class="next-title">
+        <h4>Next:</h4>
+      </div>
+      {{#each collections.work}}
+        {{#unless index}}
+          <a href="/{{this.path}}" class="{{#equal this.path ../path }}active{{/equal}}">{{ title }}</a>
+        {{/unless}}
+      {{/each}}
+      </div>
+    </main>
+    {{> nav }}
+  </div>
+{{> footer }}
+</body>
+</html>

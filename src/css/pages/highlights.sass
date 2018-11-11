@@ -1,0 +1,115 @@
+#highlights
+  // opacity: 0
+  // max-height: 0px
+  transition: all ease 1s
+  width: 100%
+  position: relative
+
+  h4
+    text-align: center
+    margin: auto
+    margin-bottom: 50px
+    margin-top: 50px
+
+#highlights.rendered
+  opacity: 1
+  max-height: 100%
+  transition: all ease 1s
+
+#highlights
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  .work-post
+    width: 100%
+    margin-bottom: 0rem
+    display: flex
+    flex-direction: column
+    +breakpoint(grid('md'))
+      flex-direction: column
+      width: 50%
+    justify-content: flex-start
+    align-items: center
+    position: relative
+    cursor: pointer
+
+    .details
+      width: 90%
+      padding-left: 0px
+      margin: auto
+      left: 0
+      right: 0
+      padding-top: 40px
+      padding-bottom: 70px
+      text-align: center
+      +breakpoint(grid('md'))
+        width: 60%
+        padding-top: 0px
+        padding-bottom: 0px
+        position: absolute
+        opacity: 0
+        top: 50%
+        transform: translateY(-50%)
+        padding-left: 40px
+
+      p
+        color: $black
+        font-weight: 400
+      .title
+        font-size: 1.8rem
+        margin-bottom: 0.5rem
+        +breakpoint(grid('md'))
+          font-size: 2.5rem
+          margin-bottom: 1.5rem
+      .client
+        margin-bottom: 0.5rem
+        text-transform: uppercase
+        font-size: .8rem
+        letter-spacing: 1px
+        color: $black
+  a
+    font-weight: 700
+    &:hover
+      text-decoration: none
+
+  .image-link
+    border-bottom: none !important
+    +breakpoint(grid('md'))
+      &:hover img
+        opacity: 0.1
+        // transform: scale(1.02)
+        // box-shadow: 0px 10px 20px rgba($black, .2)
+        transition: all 0.25s ease
+        // margin-bottom: 2rem
+  .work-post:hover .details
+    opacity: 1
+    transition: all ease 0.5s
+
+  .work-post:hover
+    text-decoration: none
+
+    .tag
+      text-decoration: none
+
+
+
+
+  img
+    max-width: 100%
+    +breakpoint(grid('md'))
+      // max-width: 60%
+    // margin-bottom: 1.5rem
+    // border-radius: 4px
+    transition: all 0.25s ease
+    // border: 6px dashed $blue
+
+  .tag
+    margin-bottom: 5px
+
+  .title
+    color: $black
+    position: relative
+    display: inline-block
+    font-size: 1.6rem
+    widows: 2
+    font-weight: 800

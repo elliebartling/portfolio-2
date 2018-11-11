@@ -1,0 +1,32 @@
+#about
+  margin-top: 200px
+  max-width: 800px
+
+  .row.resume
+    border-top: 2px solid $black
+    margin-top: 100px
+    padding-top: 40px
+    display: block
+    +breakpoint(grid('md'))
+      display: flex
+    .col:first-child
+      +breakpoint(grid('md'))
+
+        max-width: 30%
+    strong
+      @extend %special
+      margin-top: 5px
+    h2
+      margin-top: 0px
+
+
+
+  #iframe, img
+    width: 110%
+    position: relative
+    left: -5%
+    right: -5%
+    max-width: 130%
+    margin-top: 2rem
+    margin-bottom: 2rem
+ 

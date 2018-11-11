@@ -6,19 +6,49 @@ var collections   = require('metalsmith-collections');
 var writemetadata = require('metalsmith-writemetadata');
 var metadata      = require('metalsmith-metadata');
 var watch         = require('metalsmith-watch');
-let assets        = require( 'metalsmith-assets-improved' )
-var relative      = require('./lib/relative.js')
+
+var asset         = require('metalsmith-static');
+// var relative      = require('./lib/relative.js')
+var relAssets     = require('./lib/best-assets.js')
 var msIf          = require('metalsmith-if');
 var dataLoader    = require("metalsmith-data-loader")
+var inplace       = require('metalsmith-in-place')
+var moremeta      = require('./lib/moremeta')
+var filter        = require('metalsmith-filter');
+var publish       = require('metalsmith-publish');
+var metallic      = require('metalsmith-metallic');
+var replace       = require('metalsmith-text-replace');
+var args          = require('args')
+var bearfrontmatter = require('./lib/bear-frontmatter-compatibility')
+var Handlebars    = require('handlebars')
+
+Handlebars.registerHelper('equal', function(lvalue, rvalue, options) {
+    if (arguments.length < 3)
+        throw new Error("Handlebars Helper equal needs 2 parameters");
+    if( lvalue!=rvalue ) {
+        return options.inverse(this);
+    } else {
+        return options.fn(this);
+    }
+});
 
 
-var shouldWatch = process.env.NODE_ENV == 'production' ? false : true
-console.log('Environment is ' + process.env.NODE_ENV)
+args.option('watch', 'Whether or not to watch content assets for changes', false)
+const flags = args.parse(process.argv)
 
+var shouldWatch = process.env.NODE_ENV == 'production' ? false : flags.watch
+// console.log('Should watch? ' + shouldWatch)
+
+var templateConfig = {
+    engine: 'handlebars',
+    directory: 'layouts/',
+    partials: 'layouts/partials/',
+    default: 'page.html'
+  };
 
 metalsmith(__dirname)
   .source('./content')
-  .destination('./build/api')
+  .destination('./build')
   .clean(true)
   .use((files, metalsmith, done) => {
     metalsmith._metadata.collections = null
@@ -26,24 +56,73 @@ metalsmith(__dirname)
     metalsmith._metadata.pages = null
     done()
   })
+  .use(asset({
+    "src": "assets",
+    "dest": "./assets"
+  }))
+  .use(relAssets())
+  .use(filter('**/*.md', { debug: false }))
+  .use(bearfrontmatter())
   .use(collections({
+    page: {
+      pattern: '**/index.*',
+      sortBy: 'priority',
+      reverse: true,
+      refer: false
+    },
     posts: {
       pattern: 'posts/*.md',
       sortBy: 'date',
-      reverse: true
+      metadata: {
+        layout: "post.html"
+      }
     },
     work: {
       pattern: 'work/*.md',
-      sortBy: 'order',
-      reverse: false
+      sortBy: 'priority',
+      metadata: {
+        layout: 'work.html',
+      }
     }
   }))
-  .use(markdown())
-  .use(permalinks())
-  .use(relative({
-    searchFor: '../assets',
-    replaceWith: '/assets'
+  .use(publish())
+  .use(markdown({
+    smartypants: true,
+    gfm: true,
+    tables: true
   }))
+  // .use(relAssets())
+  .use(replace({
+    '**/**': [
+      {
+        find: /\[row\]/g,
+        replace: "<div class='row'>"
+      },{
+        find: /\[row center\]/g,
+        replace: "<div class='row align-items-center'>"
+      },{
+        find: /\[row resume\]/g,
+        replace: "<div class='row resume'>"
+      },{
+        find: /\[col\]/g,
+        replace: "<div class='col'>"
+      },{
+        find: /\[\/col\]/g,
+        replace: "</div>"
+      },{
+        find: /\[\/row\]/g,
+        replace: "</div>"
+      },{
+        find: /\[spacer\]/g,
+        replace: "<div class='spacer'></div>"
+      }
+    ]
+    }))
+  .use(permalinks({ // generate permalinks
+    pattern: ':mainCollection/:title'
+  }))
+  .use(moremeta())
+  .use(layouts(templateConfig))
   .use(writemetadata({
     pattern: ['**/*'],
     ignorekeys: ['next', 'previous', 'stats', 'mode'],
@@ -53,36 +132,22 @@ metalsmith(__dirname)
     collections: {
       posts: {
         output: {
-          path: 'posts.json',
+          path: 'api/posts.json',
           asObject: true,
-          metadata: {
-            "type": "collection"
-          }
         },
-        ignorekeys: ['stats', 'mode']
+        ignorekeys: ['stats', 'mode', 'next', 'previous']
       },
       work: {
         output: {
-          path: 'work.json',
+          path: 'api/work.json',
           asObject: true,
           metadata: {
             "type": "collection"
           }
         },
-        ignorekeys: ['stats', 'mode']
+        ignorekeys: ['stats', 'mode', 'next', 'previous']
       }
     }
-  }))
-  // .use(dataloader({
-  //   dataProperty: 'api',
-  //
-  // }))
-  // .use(layouts({
-  //   engine: 'handlebars'
-  // }))
-  .use(assets({
-    src: 'assets',
-    dest: '../assets'
   }))
   .use(msIf(
     shouldWatch,
@@ -94,13 +159,6 @@ metalsmith(__dirname)
       }
     })
   ))
-  // .use(watch({
-  //   paths: {
-  //     "content/**/*": true,
-  //     "layouts/**/*": "**/*",
-  //     "assets/**": true
-  //   }
-  // }))
   .build(function(err, files) {
     if (err) { throw err; }
   })

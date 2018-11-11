@@ -6,24 +6,45 @@
     "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "build": "node build.js",
-    "deploy": "NODE_ENV=production node build.js && yarn run production && surge --project ./build --domain ellenbartling.surge.sh"
+    "build": "node build.js --watch",
+    "buildonce": "node build.js",
+    "deploy": "NODE_ENV=production node build.js && yarn run production && surge --project ./build --domain http://ellenbartling.com"
   },
   "git": {
-    "scripts": {
-      "pre-push": "surge --project ./build --domain ellenbartling.surge.sh"
-    }
+    "scripts": {}
   },
   "dependencies": {
+    "args": "^3.0.8",
     "axios": "^0.18.0",
     "bootstrap": "^4.0.0",
+    "breakpoint-sass": "^2.7.1",
+    "chart.js": "^2.7.2",
+    "cheerio": "^1.0.0-rc.2",
+    "fs-extra": "^5.0.0",
     "lodash": "^4.17.5",
+    "metalsmith-filter": "^1.0.2",
     "metalsmith-if": "^0.1.1",
+    "metalsmith-image-dimensions": "^0.1.0",
+    "metalsmith-image-sizes": "^0.0.1",
+    "metalsmith-in-place": "^4.1.1",
+    "metalsmith-metallic": "^2.0.2",
+    "metalsmith-prism": "^3.1.1",
+    "metalsmith-project-images": "^1.1.2",
+    "metalsmith-publish": "^0.1.5",
+    "metalsmith-replace": "^1.0.0",
+    "metalsmith-static": "^0.0.5",
+    "metalsmith-text-replace": "^1.0.1",
+    "moment": "^2.21.0",
+    "path": "^0.12.7",
     "vue": "^2.5.16",
+    "vue-chartjs": "^3.2.1",
     "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync-webpack-plugin": "^2.0.1",
     "buffer-replace": "^1.0.0",
     "git-scripts": "^0.2.1",
